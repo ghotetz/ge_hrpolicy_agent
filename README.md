@@ -26,3 +26,12 @@ pip install google-adk litellm
 adk web
 127.0.0.1:8000
 ```
+
+- 검증 완료 후 Gemini Enterprise 에 에이전트로 등록
+```bash
+adk deploy agent_engine \
+  --project="프로젝트명" \
+  --region="리전명" \
+  --display_name="에이전트명" \
+  hr_policy_agent
+```
