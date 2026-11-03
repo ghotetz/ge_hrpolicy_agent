@@ -1,5 +1,7 @@
 # 📌 Google ADK HR Policy Agent
 > 입사 연차 별 연차 일수 자동 계산 에이전트
+>
+> Google-ADK 를 활용한 AI Agent 사용 예시
 
 ## ⚡ 주요 기능 (Features)
 > 법적 제공 연차(최대 25일, 최소 11일) 을 자동으로 계산
