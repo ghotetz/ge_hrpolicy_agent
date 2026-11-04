@@ -35,5 +35,5 @@ adk deploy agent_engine \
   --project="프로젝트명" \
   --region="리전명" \
   --display_name="에이전트명" \
-  hr_policy_agent
+  "에이전트 프로젝트 경로"
 ```
