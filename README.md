@@ -29,6 +29,12 @@ adk web
 127.0.0.1:8000
 ```
 
+- Agent 동작 확인
+```bash
+2023-03-02 입사자의 올해 연차는 며칠이야? > 도구 호출 이벤트와 계산 결과가 보이는지 확인
+```
+
+
 - 검증 완료 후 Gemini Enterprise 에 에이전트로 등록
 ```bash
 adk deploy agent_engine \
