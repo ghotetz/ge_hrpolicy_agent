@@ -7,7 +7,7 @@
 > 법적 제공 연차(최대 25일, 최소 11일) 을 자동으로 계산
 
 ## 🛠 기술 스택 (Tech Stack)
-- Google ADK, Python
+- Google ADK, Python, Function-calling, Gemini-Enterprise, AI-Agent
 
 ## 💻 시작 가이드 (Getting Started)
 - Google Cloud 인증
