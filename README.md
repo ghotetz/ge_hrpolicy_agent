@@ -14,7 +14,7 @@
 ```bash
 gcloud auth login
 gcloud auth application-default login
-gcloud config set project ax-gemini-lab
+gcloud config set project "gcp-project"
 ```
 
 - Google ADK 설치
@@ -43,3 +43,60 @@ adk deploy agent_engine \
   --display_name="에이전트명" \
   "에이전트 프로젝트 경로"
 ```
+
+# 📌 HR Policy Agent (Google ADK)
+
+> An agent that calculates an employee's annual leave entitlement from their start date.
+>
+> A minimal example of building an AI agent with Google ADK function tools.
+
+## ⚡ Features
+
+- Automatically calculates statutory annual leave under Korean labor law (minimum 11 days, maximum 25 days)
+- Uses a function tool for the calculation, so the result is computed rather than guessed by the model
+
+## 🛠 Tech Stack
+
+- Google ADK, function calling, Python, Gemini Enterprise
+
+## 💻 Getting Started
+
+### 1. Authenticate to Google Cloud
+
+```bash
+gcloud auth login
+gcloud auth application-default login
+gcloud config set project "gcp-project"
+```
+
+### 2. Install Google ADK
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install google-adk litellm
+```
+
+### 3. Run the agent locally
+
+```bash
+adk web
+# open http://127.0.0.1:8000
+```
+
+### 4. Try it
+
+| Prompt | Expected behavior |
+| --- | --- |
+| How many days of annual leave does an employee who joined on 2023-03-02 have this year? | The tool-call event and the calculated result appear in the ADK web UI |
+
+### 5. Deploy and register in Gemini Enterprise
+
+```bash
+adk deploy agent_engine \
+  --project="<project-id>" \
+  --region="<region>" \
+  --display_name="<agent-name>" \
+  "<path-to-agent-project>"
+```
+
+Once deployed to Vertex AI Agent Engine, register the agent in Gemini Enterprise.
